@@ -17,13 +17,14 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#f8d2b2";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
+static const char col_gray5[]       = "#bb635b";
 //Top bar second color (blue) and active window border color
 //static const char col_cyan[]        = "#f59542";
 static const char col_cyan[]        = "#2c465a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_gray5 },
 };
 
 /* tagging */
