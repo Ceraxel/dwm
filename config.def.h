@@ -10,16 +10,16 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=10", "JetbrainsMono Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#0c141c";
 //inactive window border color
 static const char col_gray2[]       = "#444444";
 //font color
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#f8d2b2";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (blue) and active window border color
 //static const char col_cyan[]        = "#f59542";
-static const char col_cyan[]        = "#03dac6";
+static const char col_cyan[]        = "#2c465a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
