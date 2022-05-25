@@ -1,0 +1,18 @@
+--- dwm.c	2020-05-12 02:17:20.070933833 +0200
++++ dwm.c	2020-05-14 00:17:35.047919771 +0200
+@@ -119,6 +119,7 @@ struct Monitor {
+ 	int by;               /* bar geometry */
+ 	int mx, my, mw, mh;   /* screen size */
+ 	int wx, wy, ww, wh;   /* window area  */
++	unsigned int borderpx;
+ 	unsigned int seltags;
+ 	unsigned int sellt;
+ 	unsigned int tagset[2];
+@@ -639,6 +641,7 @@ createmon(void)
+ 	m->nmaster = nmaster;
+ 	m->showbar = showbar;
+ 	m->topbar = topbar;
++	m->borderpx = borderpx;
+ 	m->lt[0] = &layouts[0];
+ 	m->lt[1] = &layouts[1 % LENGTH(layouts)];
+ 	strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);

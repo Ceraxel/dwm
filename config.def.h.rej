@@ -1,20 +1,12 @@
---- config.def.h
-+++ config.def.h
-@@ -39,6 +39,8 @@ static const Layout layouts[] = {
- 	{ "[]=",      tile },    /* first entry is default */
- 	{ "><>",      NULL },    /* no layout function means floating behavior */
- 	{ "[M]",      monocle },
-+	{ "|M|",      centeredmaster },
-+	{ ">M>",      centeredfloatingmaster },
- };
- 
- /* key definitions */
-@@ -74,6 +76,8 @@ static Key keys[] = {
- 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
- 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
- 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
-+	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
- 	{ MODKEY,                       XK_space,  setlayout,      {0} },
- 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
- 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+--- config.def.h	2020-05-12 02:17:20.070933833 +0200
++++ config.def.h	2020-05-13 03:27:51.018695798 +0200
+@@ -84,6 +84,9 @@ static Key keys[] = {
+ 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+ 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+ 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
++	{ MODKEY|ShiftMask,             XK_minus, 		setborderpx,    {.i = -1 } },
++	{ MODKEY|ShiftMask,             XK_plus, 		setborderpx,    {.i = +1 } },
++	{ MODKEY|ShiftMask,             XK_numbersign, 	setborderpx,    {.i = 0 } },
+ 	TAGKEYS(                        XK_1,                      0)
+ 	TAGKEYS(                        XK_2,                      1)
+ 	TAGKEYS(                        XK_3,                      2)
