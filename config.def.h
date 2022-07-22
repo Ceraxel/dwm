@@ -10,17 +10,17 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
-static const char col_gray1[]       = "#1c222b";
+static const char col_gray1[]       = "#0b0f10";
 //inactive window border color
-static const char col_gray2[]       = "#7e7d7f";
+static const char col_gray2[]       = "#c5c8c9";
 //font color
-static const char col_gray3[]       = "#fffcce";
+static const char col_gray3[]       = "#eeeeee";
 //current tag and current window font color
-static const char col_gray4[]       = "#eeeeee";
-static const char col_gray5[]       = "#cd4224";
+static const char col_gray4[]       = "#0b0f10";
+static const char col_gray5[]       = "#70b9cc";
 //Top bar second color (blue) and active window border color
 //static const char col_cyan[]        = "#f59542";
-static const char col_cyan[]        = "#365567";
+static const char col_cyan[]        = "#70b9cc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -102,12 +102,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,	                    XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
+	//{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },
-	{ MODKEY|ShiftMask,             XK_o,      setlayout,      {.v = &layouts[6]} },
+	//{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
+	//{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },
+	//{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },
+	//{ MODKEY|ShiftMask,             XK_o,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  setlayout,      {0} },
