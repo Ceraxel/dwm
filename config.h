@@ -124,11 +124,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal, 		setborderpx,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,              		    XK_n,      shiftview,  	   { .i = +1 } },
-	{ MODKEY,              		    XK_b,      shiftview,      { .i = -1 } },
-    { MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
-    { MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
-    { MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
+	{ MODKEY,              		XK_grave,      shiftview,  	   { .i = +1 } },
+	{ MODKEY|ControlMask,   	XK_grave,      shiftview,      { .i = -1 } },
+	{ MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
+	{ MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
+	{ MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
