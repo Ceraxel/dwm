@@ -15,7 +15,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
-static const char col_gray1[]       = "#0b0f10";
+static const char col_gray1[]       = "#0b0b0b";
 //inactive window border color
 static const char col_gray2[]       = "#c5c8c9";
 //font color
