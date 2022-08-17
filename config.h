@@ -35,7 +35,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
