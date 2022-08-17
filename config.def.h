@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 10;        /* gaps size between windows */
+static const unsigned int gappx     = 0;        /* gaps size between windows */
 static const unsigned int snap      = 12;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -30,12 +30,12 @@ static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_white, col_cyan,  col_gray3 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3 },
 };
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -141,8 +141,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal, 		setborderpx,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,              		XK_grave,      shiftview,  	   { .i = +1 } },
-	{ MODKEY|ControlMask,   	XK_grave,      shiftview,      { .i = -1 } },
+	{ MODKEY,              		XK_grave,      shiftviewclients,  	   { .i = +1 } },
+	{ MODKEY|ControlMask,   	XK_grave,      shiftviewclients,      { .i = -1 } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
