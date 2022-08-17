@@ -2,8 +2,8 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 2;        /* gaps size between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappx     = 10;        /* gaps size between windows */
+static const unsigned int snap      = 12;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
@@ -20,16 +20,17 @@ static const char col_gray1[]       = "#0b0f10";
 static const char col_gray2[]       = "#c5c8c9";
 //font color
 static const char col_gray3[]       = "#eeeeee";
+static const char col_white[]       = "#ffffff";
 //current tag and current window font color
 static const char col_gray4[]       = "#0b0f10";
 static const char col_gray5[]       = "#70b9cc";
 //Top bar second color (blue) and active window border color
 //static const char col_cyan[]        = "#f59542";
-static const char col_cyan[]        = "#70b9cc";
+static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray5 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_white, col_cyan,  col_gray3 },
 };
 
 /* tagging */
@@ -54,7 +55,7 @@ static const Rule rules[] = {
 	{ "Thunar",       NULL,     NULL,           1 << 4,    0,          0,           0,        -1 },
 	{ "Xarchiver",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Alacritty",    NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,           NULL,     "Ranger",       0,         0,          1,           0,        -1 },
+	{ "St",           NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,           NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
