@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 0;        /* gaps size between windows */
+static const unsigned int gappx     = 1;        /* gaps size between windows */
 static const unsigned int snap      = 12;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -24,14 +24,13 @@ static const char col_gray3[]       = "#eff0f1";
 static const char col_white[]       = "#ffffff";
 //current tag and current window font color
 static const char col_gray4[]       = "#0b0f10";
-static const char col_gray5[]       = "#70b9cc";
+static const char col_gray5[]       = "#152238";
 //Top bar second color (blue) and active window border color
-//static const char col_cyan[]        = "#f59542";
 static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_gray1, col_white },
-	[SchemeSel]  = { col_gray1, col_white,  col_gray1 },
+	[SchemeNorm] = { col_white, col_gray4, col_gray4 },
+	[SchemeSel]  = { col_gray1, col_white,  col_gray2 },
 };
 
 /* tagging */
