@@ -15,11 +15,12 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
-static const char col_gray1[]       = "#0b0b0b";
+//static const char col_gray1[]       = "#0b0b0b";
+static const char col_gray1[]       = "#000000";
 //inactive window border color
 static const char col_gray2[]       = "#c5c8c9";
 //font color
-static const char col_gray3[]       = "#eeeeee";
+static const char col_gray3[]       = "#eff0f1";
 static const char col_white[]       = "#ffffff";
 //current tag and current window font color
 static const char col_gray4[]       = "#0b0f10";
@@ -30,7 +31,7 @@ static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3 },
+	[SchemeSel]  = { col_gray1, col_gray3,  col_gray3 },
 };
 
 /* tagging */
