@@ -5,16 +5,16 @@
  * manager selects for SubstructureRedirectMask on the root window, to receive
  * events about window (dis-)appearance. Only one X connection at a time is
  * allowed to select for this event mask.
- *
  * The event handlers of dwm are organized in an array which is accessed
  * whenever a new event has been fetched. This allows event dispatching
  * in O(1) time.
- *
  * Each child of the root window is called a client, except windows which have
  * set the override_redirect flag. Clients are organized in a linked client
  * list on each monitor, the focus history is remembered through a stack list
  * on each monitor. Each client contains a bit array to indicate the tags of a
  * client.
+ *
+ * Uncomment enternotify to focus on hover
  *
  * Keys and tagging rules are organized as arrays and defined in config.h.
  *
@@ -202,7 +202,7 @@ static void detachstack(Client *c);
 static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
-static void enternotify(XEvent *e);
+//static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
 static void focusin(XEvent *e);
@@ -981,24 +981,24 @@ drawbars(void)
 		drawbar(m);
 }
 
-void
-enternotify(XEvent *e)
-{
-	Client *c;
-	Monitor *m;
-	XCrossingEvent *ev = &e->xcrossing;
-
-	if ((ev->mode != NotifyNormal || ev->detail == NotifyInferior) && ev->window != root)
-		return;
-	c = wintoclient(ev->window);
-	m = c ? c->mon : wintomon(ev->window);
-	if (m != selmon) {
-		unfocus(selmon->sel, 1);
-		selmon = m;
-	} else if (!c || c == selmon->sel)
-		return;
-	focus(c);
-}
+//void
+//enternotify(XEvent *e)
+//{
+	//Client *c;
+	//Monitor *m;
+	//XCrossingEvent *ev = &e->xcrossing;
+//
+	//if ((ev->mode != NotifyNormal || ev->detail == NotifyInferior) && ev->window != root)
+		//return;
+	//c = wintoclient(ev->window);
+	//m = c ? c->mon : wintomon(ev->window);
+	//if (m != selmon) {
+		//unfocus(selmon->sel, 1);
+		//selmon = m;
+	//} else if (!c || c == selmon->sel)
+		//return;
+	//focus(c);
+//}
 
 void
 expose(XEvent *e)
