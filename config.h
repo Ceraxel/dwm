@@ -2,14 +2,14 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 7;        /* gaps size between windows */
-static const unsigned int snap      = 10;       /* snap pixel */
+static const unsigned int gappx     = 0;        /* gaps size between windows */
+static const unsigned int snap      = 5;        /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
 static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
@@ -32,8 +32,6 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_white, col_gray4, col_white },
 	[SchemeSel]  = { col_gray1, col_white,  col_gray1 },
 };
-
-/* tagging */
 //tag names (upper left)
 static const char *tags[] = { "", "", "", "", "", "", "", };
 
@@ -50,6 +48,7 @@ static const Rule rules[] = {
 	{ "Xarchiver",      NULL,       NULL,       0,            1,           -1 },*/
 	/* class          instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",         NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Code",         NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
 	{ "firefox",      NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
 	{ "mpv",          NULL,     NULL,           1 << 3,    0,          0,           0,        -1 },
 	{ "Thunar",       NULL,     NULL,           1 << 4,    0,          0,           0,        -1 },
@@ -62,7 +61,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 #include "fibonacci.c"
 static const Layout layouts[] = {
@@ -76,7 +75,6 @@ static const Layout layouts[] = {
 	{ ">M>",      centeredfloatingmaster },
 	{ NULL,       NULL },
 };
-
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -90,7 +88,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_white, "-sb", col_white, "-sf", col_gray4, NULL };
+//static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_white, "-sb", col_white, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *runcmd[] = { "rofi", "-show", "run", NULL };
 //static const char *filemanager[] = { "
 //launches htop
 static const char *monitor[] = { "st", "-e", "htop", NULL };
@@ -110,6 +110,7 @@ static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL
 static Key keys[] = {
 	/* modifier                     key              function                argument */
 	{ MODKEY,                       XK_d,            spawn,                  {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_d,            spawn,                  {.v = runcmd } },
 	{ MODKEY,	                XK_Return,       spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,       togglescratch,          {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_t,            togglebar,              {0} },
