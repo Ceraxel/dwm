@@ -9,7 +9,7 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
 static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
@@ -29,7 +29,7 @@ static const char col_gray5[]       = "#152238";
 static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_gray4, col_white },
+	[SchemeNorm] = { col_white, col_gray1, col_white },
 	[SchemeSel]  = { col_gray1, col_white,  col_gray1 },
 };
 //tag names (upper left)
@@ -51,7 +51,6 @@ static const Rule rules[] = {
 	{ "Code",         NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
 	{ "firefox",      NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
 	{ "mpv",          NULL,     NULL,           1 << 3,    0,          0,           0,        -1 },
-	{ "Thunar",       NULL,     NULL,           1 << 4,    0,          0,           0,        -1 },
 	{ "Xarchiver",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Alacritty",    NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "St",           NULL,     NULL,           0,         0,          1,           0,        -1 },
