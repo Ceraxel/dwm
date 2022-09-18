@@ -33,7 +33,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray1, col_white,  col_gray1 },
 };
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -52,7 +52,6 @@ static const Rule rules[] = {
 	{ "firefox",      NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
 	{ "mpv",          NULL,     NULL,           1 << 3,    0,          0,           0,        -1 },
 	{ "Xarchiver",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Alacritty",    NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "St",           NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,           NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
