@@ -12,7 +12,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
-static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=10:style=ExtraBold", "Iosevka Nerd Font:size=10" };
+static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=10:style=Bold", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "Iosevka Nerd Font:size=10";
 //background color
 //static const char col_gray1[]       = "#0b0b0b";
@@ -30,10 +30,10 @@ static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_white, col_gray1,  col_white },
+	[SchemeSel]  = { col_gray1, col_white,  col_white },
 };
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
