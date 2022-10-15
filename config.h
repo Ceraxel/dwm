@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 0;        /* gaps size between windows */
+static const unsigned int gappx     = 5;        /* gaps size between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -12,7 +12,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
-static const char *fonts[]          = { "Iosevka Nerd Font:size=10", "Iosevka Nerd Font:size=10" };
+static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=10:style=ExtraBold", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "Iosevka Nerd Font:size=10";
 //background color
 //static const char col_gray1[]       = "#0b0b0b";
@@ -29,11 +29,11 @@ static const char col_gray5[]       = "#152238";
 static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_gray1, col_white },
-	[SchemeSel]  = { col_gray1, col_white,  col_gray1 },
+	[SchemeNorm] = { col_white, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_white, col_gray1,  col_white },
 };
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", "", "", };
+static const char *tags[] = { "1", "2", "3", "4", "5", };
 
 static const Rule rules[] = {
 	/* xprop(1):
