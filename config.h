@@ -10,7 +10,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=10" };
 static const char *fonts[]          = { "JetbrainsMono Nerd Font:size=10:style=Bold", "Iosevka Nerd Font:size=10" };
 static const char dmenufont[]       = "Iosevka Nerd Font:size=10";
