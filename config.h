@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details */
-
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
 static const unsigned int gappx     = 5;        /* gaps size between windows */
@@ -20,7 +19,7 @@ static const char col_gray1[]       = "#000000";
 //inactive window border color
 static const char col_gray2[]       = "#c5c8c9";
 //font color
-static const char col_gray3[]       = "#eff0f1";
+static const char col_green[]       = "#04db3e";
 static const char col_white[]       = "#ffffff";
 //current tag and current window font color
 static const char col_gray4[]       = "#0b0f10";
@@ -30,7 +29,7 @@ static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray1, col_white,  col_white },
+	[SchemeSel]  = { col_green, col_gray1,  col_white },
 };
 //tag names (upper left)
 static const char *tags[] = { "", "", "", "", "", };
