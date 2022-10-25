@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details */
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel size of windows */
-static const unsigned int gappx     = 5;        /* gaps size between windows */
+static const unsigned int gappx     = 2;        /* gaps size between windows */
 static const unsigned int snap      = 5;        /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -17,7 +17,7 @@ static const char dmenufont[]       = "Iosevka Nerd Font:size=10";
 //static const char col_gray1[]       = "#0b0b0b";
 static const char col_gray1[]       = "#000000";
 //inactive window border color
-static const char col_gray2[]       = "#c5c8c9";
+static const char col_blue[]       = "#2ac3de";
 //font color
 static const char col_green[]       = "#04db3e";
 static const char col_white[]       = "#ffffff";
@@ -29,10 +29,10 @@ static const char col_cyan[]        = "#1798bc";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_green, col_gray1,  col_white },
+	[SchemeSel]  = { col_blue,  col_gray1, col_white },
 };
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ "Code",         NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
 	{ "firefox",      NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
 	{ "mpv",          NULL,     NULL,           1 << 3,    0,          0,           0,        -1 },
+	{ "qBittorrent",  NULL,     NULL,           1 << 4,    0,          0,           0,        -1 },
 	{ "Xarchiver",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "St",           NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,           NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
