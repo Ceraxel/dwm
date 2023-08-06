@@ -108,7 +108,12 @@ static char dmenumon[2] =
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn",
 // dmenufont, "-nb", col_gray1, "-nf", col_white, "-sb", col_white, "-sf",
 // col_gray4, NULL };
-static const char *dmenucmd[] = {"rofi", "-show", "drun", NULL};
+static const char *dmenucmd[] = {"rofi",
+                                 "-show",
+                                 "drun",
+                                 "-theme",
+                                 "~/.config/rofi/launchers/type-1/style-5.rasi",
+                                 NULL};
 static const char *runcmd[] = {"rofi", "-show", "run", NULL};
 // static const char *filemanager[] = { "
 // launches htop
