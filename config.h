@@ -124,6 +124,7 @@ static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
 static const char *upvol[] = {"pamixer", "-i", "5"};
 static const char *downvol[] = {"pamixer", "-d", "5"};
 static const char *mutevol[] = {"pamixer", "-t"};
+static const char *prtscrcmd[] = {"flameshot", "gui", NULL};
 
 #include "shiftview.c"
 // static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
@@ -157,6 +158,7 @@ static Key keys[] = {
     {0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
     {0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
     {0, XF86XK_AudioMute, spawn, {.v = mutevol}},
+    {0, XK_Print, spawn, {.v = prtscrcmd}},
     {MODKEY | ControlMask, XK_comma, cyclelayout, {.i = -1}},
     {MODKEY | ControlMask, XK_period, cyclelayout, {.i = +1}},
     {MODKEY | ShiftMask, XK_space, setlayout, {0}},
