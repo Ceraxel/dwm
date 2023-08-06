@@ -21,8 +21,8 @@ static const int topbar = 1;  /* 0 means bottom bar */
 static const char *fonts[] = {"JetbrainsMono Nerd Font:size=10:style=Bold",
                               "Iosevka Nerd Font:size=10"};
 static const char dmenufont[] = "Iosevka Nerd Font:size=10";
-static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
-static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
+static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
+static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
 // background color
 // static const char col_gray1[]       = "#0b0b0b";
 static const char col_gray1[] = "#000000";
@@ -121,12 +121,9 @@ static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "120x34", NULL};
 // sets st as the default terminal
 // volume controls
-static const char *upvol[] = {"amixer", "-q",     "set", "Master",
-                              "5%+",    "unmute", NULL};
-static const char *downvol[] = {"amixer", "-q",     "set", "Master",
-                                "5%-",    "unmute", NULL};
-static const char *mutevol[] = {"amixer", "-q",     "set",
-                                "Master", "toggle", NULL};
+static const char *upvol[] = {"pamixer", "-i", "5"};
+static const char *downvol[] = {"pamixer", "-d", "5"};
+static const char *mutevol[] = {"pamixer", "-t"};
 
 #include "shiftview.c"
 // static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
@@ -155,8 +152,11 @@ static Key keys[] = {
     //&layouts[4]} }, { MODKEY,                     XK_o,            setlayout,
     //{.v = &layouts[5]} }, { MODKEY|ShiftMask,           XK_o, setlayout, {.v =
     //&layouts[6]} },
-    { 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
-    { 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
+    {0, XF86XK_MonBrightnessUp, spawn, {.v = brupcmd}},
+    {0, XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd}},
+    {0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
+    {0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
+    {0, XF86XK_AudioMute, spawn, {.v = mutevol}},
     {MODKEY | ControlMask, XK_comma, cyclelayout, {.i = -1}},
     {MODKEY | ControlMask, XK_period, cyclelayout, {.i = +1}},
     {MODKEY | ShiftMask, XK_space, setlayout, {0}},
