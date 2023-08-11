@@ -43,7 +43,7 @@ static const char *colors[][3] = {
 };
 // tag names (upper left)
 static const char *tags[] = {
-    "", "", "󰈹", "", "󰈉", "󰈙",
+    "1", "2", "3", "4", "5", "6", "7", "8", "9",
 };
 
 static const Rule rules[] = {
@@ -126,9 +126,9 @@ static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "120x34", NULL};
 // sets st as the default terminal
 // volume controls
+static const char *mutevol[] = {"pamixer", "--toggle-mute"};
 static const char *upvol[] = {"pamixer", "-i", "5"};
 static const char *downvol[] = {"pamixer", "-d", "5"};
-static const char *mutevol[] = {"pamixer", "-t"};
 static const char *prtscrcmd[] = {"flameshot", "gui", NULL};
 
 #include "shiftview.c"
@@ -181,9 +181,9 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     {MODKEY, XK_grave, shiftviewclients, {.i = +1}},
     {MODKEY | ControlMask, XK_grave, shiftviewclients, {.i = -1}},
-    {MODKEY, XK_F8, spawn, {.v = upvol}},
-    {MODKEY, XK_F7, spawn, {.v = downvol}},
-    {MODKEY, XK_F5, spawn, {.v = mutevol}},
+    /* {MODKEY, XK_F8, spawn, {.v = upvol}}, */
+    /* {MODKEY, XK_F7, spawn, {.v = downvol}}, */
+    /* {MODKEY, XK_F5, spawn, {.v = mutevol}}, */
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
             TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
