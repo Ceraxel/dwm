@@ -67,6 +67,7 @@ static const Rule rules[] = {
     {"qBittorrent", NULL, NULL, 1 << 4, 0, 0, 0, -1},
     {"Xarchiver", NULL, NULL, 0, 1, 0, 0, -1},
     {"St", NULL, NULL, 0, 0, 1, 0, -1},
+    {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
     {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
 };
 
@@ -119,7 +120,7 @@ static const char *runcmd[] = {"rofi", "-show", "run", NULL};
 // launches htop
 static const char *monitor[] = {"st", "-e", "htop", NULL};
 // sets st as the default terminal
-static const char *termcmd[] = {"kitty", NULL};
+static const char *termcmd[] = {"st", NULL};
 static const char *pavuctrl[] = {"pavucontrol", "-t", "3", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
