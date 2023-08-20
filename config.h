@@ -27,7 +27,7 @@ static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
 // static const char col_gray1[]       = "#0b0b0b";
 static const char col_gray1[] = "#000000";
 // inactive window border color
-static const char col_blue[] = "#2ac3de";
+static const char col_blue[] = "#0e547a";
 // font color
 static const char col_green[] = "#04db3e";
 static const char col_white[] = "#ffffff";
@@ -39,7 +39,7 @@ static const char col_cyan[] = "#1798bc";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_white, col_gray1, col_gray1},
-    [SchemeSel] = {col_blue, col_gray1, col_white},
+    [SchemeSel] = {col_white, col_blue, col_white},
 };
 // tag names (upper left)
 static const char *tags[] = {
