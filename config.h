@@ -24,7 +24,7 @@ static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
 static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
 // background color
 // static const char col_gray1[]       = "#0b0b0b";
-static const char col_gray1[] = "#000000";
+static const char col_gray1[] = "#222222";
 // inactive window border color
 static const char col_blue[] = "#0e547a";
 // font color
@@ -35,10 +35,11 @@ static const char col_gray4[] = "#0b0f10";
 static const char col_gray5[] = "#152238";
 // Top bar second color (blue) and active window border color
 static const char col_cyan[] = "#1798bc";
+static const char col_cyan2[] = "#005577";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_white, col_gray1, col_gray1},
-    [SchemeSel] = {col_white, col_blue, col_white},
+    [SchemeSel] = {col_white, col_cyan2, col_white},
 };
 // tag names (upper left)
 static const char *tags[] = {
@@ -118,7 +119,7 @@ static const char *runcmd[] = {"rofi", "-show", "run", NULL};
 // launches htop
 static const char *monitor[] = {"st", "-e", "htop", NULL};
 // sets st as the default terminal
-static const char *termcmd[] = {"st", NULL};
+static const char *termcmd[] = {"kitty", NULL};
 static const char *pavuctrl[] = {"pavucontrol", "-t", "3", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
