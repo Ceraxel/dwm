@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+rm -f config.h
+rm -f patches.h
+
+make
