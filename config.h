@@ -177,8 +177,8 @@ static const Rule rules[] = {
     RULE(.class = "kitty", .isterminal = 1)
 	RULE(.class = "qBittorrent", .tags = 1 << 4)
 	RULE(.class = "Xarchiver", .isfloating = 1)
-	RULE(.class = "mpv", .tags = 1 << 3)
-    {NULL,          NULL,       "Event Tester", 0,          0,          0,          1,          -1}, /* xev */
+	RULE(.class = "mpv", .noswallow = 1, .tags = 1 << 3)
+	RULE(.title = "Event Tester", .noswallow = 1)
 };
 
 static const MonitorRule monrules[] = {
