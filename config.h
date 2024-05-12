@@ -179,6 +179,7 @@ static const Rule rules[] = {
 	RULE(.class = "Xarchiver", .isfloating = 1)
 	RULE(.class = "mpv", .noswallow = 1, .tags = 1 << 3)
 	RULE(.title = "Event Tester", .noswallow = 1)
+    RULE(.class = "jetbrains-clion", .isfloating = 0)
 };
 
 static const MonitorRule monrules[] = {
@@ -286,12 +287,14 @@ static const char *downvol[] = {"pamixer", "-d", "5"};
 static const char *prtscrcmd[] = {"flameshot", "gui", NULL};
 static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
 static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
+static const char *dmenu_desktop[] = {"j4-dmenu-desktop", "--dmenu=\"dmenu\"", "NULL"};
 
 
 
 static const Key keys[] = {
 	/* modifier                     key            function                argument */
 	{ MODKEY,                       XK_d,          spawn,                  {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_d,          spawn,                  {.v = dmenu_desktop } },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	{ MODKEY|ShiftMask,             XK_b,          toggletopbar,           {0} },
