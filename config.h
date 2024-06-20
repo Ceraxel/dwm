@@ -36,54 +36,54 @@ static const char dmenufont[]            = "BerkeleyMono Nerd Font:size=10:style
 static char c000000[]                    = "#000000"; // placeholder value
 
 static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
+static char normbgcolor[]                = "#1b1b1b";
 static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#04db3e";
+static char normfloatcolor[]             = "#96df71";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
-static char selfloatcolor[]              = "#005577";
+static char selbgcolor[]                 = "#10A793";
+static char selbordercolor[]             = "#10A793";
+static char selfloatcolor[]              = "#10A793";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#222222";
+static char titlenormbgcolor[]           = "#1b1b1b";
 static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#04db3e";
+static char titlenormfloatcolor[]        = "#96df71";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#005577";
-static char titleselbordercolor[]        = "#005577";
-static char titleselfloatcolor[]         = "#005577";
+static char titleselfgcolor[]            = "#1b1b1b";
+static char titleselbgcolor[]            = "#10A793";
+static char titleselbordercolor[]        = "#10A793";
+static char titleselfloatcolor[]         = "#10A793";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#222222";
+static char tagsnormbgcolor[]            = "#1b1b1b";
 static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#04db3e";
+static char tagsnormfloatcolor[]         = "#96df71";
 
-static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#005577";
-static char tagsselbordercolor[]         = "#005577";
-static char tagsselfloatcolor[]          = "#005577";
+static char tagsselfgcolor[]             = "#1b1b1b";
+static char tagsselbgcolor[]             = "#10A793";
+static char tagsselbordercolor[]         = "#10A793";
+static char tagsselfloatcolor[]          = "#10A793";
 
-static char hidnormfgcolor[]             = "#005577";
-static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
+static char hidnormfgcolor[]             = "#10A793";
+static char hidselfgcolor[]              = "#08e7c5";
+static char hidnormbgcolor[]             = "#1b1b1b";
+static char hidselbgcolor[]              = "#1b1b1b";
 
 static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
+static char urgbgcolor[]                 = "#1b1b1b";
 static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#04db3e";
+static char urgfloatcolor[]              = "#96df71";
 
 static char scratchselfgcolor[]          = "#FFF7D4";
-static char scratchselbgcolor[]          = "#222222";
-static char scratchselbordercolor[]      = "#005577";
-static char scratchselfloatcolor[]       = "#005577";
+static char scratchselbgcolor[]          = "#1b1b1b";
+static char scratchselbordercolor[]      = "#10A793";
+static char scratchselfloatcolor[]       = "#10A793";
 
 static char scratchnormfgcolor[]         = "#FFF7D4";
-static char scratchnormbgcolor[]         = "#222222";
-static char scratchnormbordercolor[]     = "#005577";
-static char scratchnormfloatcolor[]      = "#005577";
+static char scratchnormbgcolor[]         = "#1b1b1b";
+static char scratchnormbordercolor[]     = "#10A793";
+static char scratchnormfloatcolor[]      = "#10A793";
 
 
 
@@ -206,7 +206,7 @@ static const BarRule barrules[] = {
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_tags,               draw_tags,              click_tags,              hover_tags,              "tags" },
 	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
-	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status,             draw_status,            click_status,            NULL,                    "status" },
+	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,             draw_status2d,            click_status,            NULL,                    "status" },
 	{ -1,        0,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
 };
 
