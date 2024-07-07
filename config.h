@@ -4,10 +4,10 @@
 static const unsigned int borderpx       = 1;   /* border pixel of windows */
 static const unsigned int snap           = 32;  /* snap pixel */
 static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
-static const unsigned int gappih         = 0;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 0;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 0;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 0;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = 4;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 4;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 10;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 0;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
@@ -272,12 +272,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {
 	"dmenu_run",
-	"-m", dmenumon,
-	"-fn", dmenufont,
-	"-nb", normbgcolor,
-	"-nf", normfgcolor,
-	"-sb", "#073642",
-	"-sf", selfgcolor,
+	// "-m", dmenumon,
+	// "-fn", dmenufont,
+	// "-nb", normbgcolor,
+	// "-nf", normfgcolor,
+	// "-sb", "#073642",
+	// "-sf", selfgcolor,
 	NULL
 };
 static const char *termcmd[]  = { "st", NULL };
