@@ -8,7 +8,7 @@ static const unsigned int gappih         = 4;  /* horiz inner gap between window
 static const unsigned int gappiv         = 4;  /* vert inner gap between windows */
 static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = 10;  /* vert outer gap between windows and screen edge */
-static const int smartgaps_fact          = 0;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
+static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
 static const char dwmdir[]               = "dwm";
@@ -41,31 +41,31 @@ static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#96df71";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#10A793";
-static char selbordercolor[]             = "#10A793";
-static char selfloatcolor[]              = "#10A793";
+static char selbgcolor[]                 = "#005577";
+static char selbordercolor[]             = "#005577";
+static char selfloatcolor[]              = "#005577";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
 static char titlenormbgcolor[]           = "#1b1b1b";
 static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#96df71";
 
-static char titleselfgcolor[]            = "#1b1b1b";
-static char titleselbgcolor[]            = "#10A793";
-static char titleselbordercolor[]        = "#10A793";
-static char titleselfloatcolor[]         = "#10A793";
+static char titleselfgcolor[]            = "#eeeeee";
+static char titleselbgcolor[]            = "#005577";
+static char titleselbordercolor[]        = "#005577";
+static char titleselfloatcolor[]         = "#005577";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#1b1b1b";
 static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#96df71";
 
-static char tagsselfgcolor[]             = "#1b1b1b";
-static char tagsselbgcolor[]             = "#10A793";
-static char tagsselbordercolor[]         = "#10A793";
-static char tagsselfloatcolor[]          = "#10A793";
+static char tagsselfgcolor[]             = "#eeeeee";
+static char tagsselbgcolor[]             = "#005577";
+static char tagsselbordercolor[]         = "#005577";
+static char tagsselfloatcolor[]          = "#005577";
 
-static char hidnormfgcolor[]             = "#10A793";
+static char hidnormfgcolor[]             = "#005577";
 static char hidselfgcolor[]              = "#08e7c5";
 static char hidnormbgcolor[]             = "#1b1b1b";
 static char hidselbgcolor[]              = "#1b1b1b";
@@ -77,13 +77,13 @@ static char urgfloatcolor[]              = "#96df71";
 
 static char scratchselfgcolor[]          = "#FFF7D4";
 static char scratchselbgcolor[]          = "#1b1b1b";
-static char scratchselbordercolor[]      = "#10A793";
-static char scratchselfloatcolor[]       = "#10A793";
+static char scratchselbordercolor[]      = "#005577";
+static char scratchselfloatcolor[]       = "#005577";
 
 static char scratchnormfgcolor[]         = "#FFF7D4";
 static char scratchnormbgcolor[]         = "#1b1b1b";
-static char scratchnormbordercolor[]     = "#10A793";
-static char scratchnormfloatcolor[]      = "#10A793";
+static char scratchnormbordercolor[]     = "#005577";
+static char scratchnormfloatcolor[]      = "#005577";
 
 
 
