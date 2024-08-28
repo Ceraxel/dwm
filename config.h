@@ -6,8 +6,8 @@ static const unsigned int snap           = 32;  /* snap pixel */
 static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
 static const unsigned int gappih         = 4;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 4;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 10;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh         = 4;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 4;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
@@ -105,7 +105,7 @@ static char *colors[][ColCount] = {
 
 
 
-static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL};
+static const char *scratchpadcmd[] = {"s", "alacritty", "-n", "spterm", NULL};
 
 /* Tags
  * In a traditional dwm the number of tags in use can be changed simply by changing the number
@@ -174,6 +174,7 @@ static const Rule rules[] = {
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "firefox", .tags = 1 << 2)
 	RULE(.class = "st-256color", .isterminal = 1)
+	RULE(.class = "Alacritty", .isterminal = 1)
     RULE(.class = "kitty", .isterminal = 1)
 	RULE(.class = "qBittorrent", .tags = 1 << 4)
 	RULE(.class = "Xarchiver", .isfloating = 1)
@@ -206,7 +207,7 @@ static const BarRule barrules[] = {
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_tags,               draw_tags,              click_tags,              hover_tags,              "tags" },
 	{  0,        0,     BAR_ALIGN_RIGHT,  width_systray,            draw_systray,           click_systray,           NULL,                    "systray" },
 	{ -1,        0,     BAR_ALIGN_LEFT,   width_ltsymbol,           draw_ltsymbol,          click_ltsymbol,          NULL,                    "layout" },
-	{ statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,             draw_status2d,            click_status,            NULL,                    "status" },
+    { statusmon, 0,     BAR_ALIGN_RIGHT,  width_status2d,           draw_status2d,          click_status,            NULL,                    "status" },
 	{ -1,        0,     BAR_ALIGN_NONE,   width_awesomebar,         draw_awesomebar,        click_awesomebar,        NULL,                    "awesomebar" },
 };
 
@@ -280,14 +281,17 @@ static const char *dmenucmd[] = {
 	// "-sf", selfgcolor,
 	NULL
 };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
+static const char *thunarcmd[]  = { "thunar", NULL };
 static const char *mutevol[] = {"pamixer", "--toggle-mute"};
-static const char *upvol[] = {"pamixer", "-i", "5"};
-static const char *downvol[] = {"pamixer", "-d", "5"};
+static const char *upvol[] = {"pamixer", "-i", "2"};
+static const char *downvol[] = {"pamixer", "-d", "2"};
 static const char *prtscrcmd[] = {"flameshot", "gui", NULL};
 static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
 static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
 static const char *dmenu_desktop[] = {"j4-dmenu-desktop", "--dmenu=\"dmenu\"", "NULL"};
+static const char *monitor_ext[] = {"monitor-ext.sh", "NULL"};
+static const char *monitor_int[] = {"monitor-int.sh", "NULL"};
 
 
 
@@ -369,6 +373,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F2,         mpdchange,              {.i = +1} },
 	{ MODKEY,                       XK_Escape,     mpdcontrol,             {0} },
     // Custom shortcuts
+	{ MODKEY,                       XK_e,          spawn,                  {.v = thunarcmd } },
+	{ MODKEY,                       XK_i,          spawn,                  {.v = monitor_int } },
+	{ MODKEY|ShiftMask,             XK_i,          spawn,                  {.v = monitor_ext } },
     {0,                             XK_Print,      spawn,                  {.v = prtscrcmd}},
     {0,                   XF86XK_MonBrightnessUp,  spawn,                  {.v = brupcmd}},
     {0,                  XF86XK_MonBrightnessDown, spawn,                  {.v = brdowncmd}},
